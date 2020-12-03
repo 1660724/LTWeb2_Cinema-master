@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <%- include ./head-template.ejs %>
+        <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/management-style.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/index-style.css" />
+        <title>Booking</title>
+        <script type="text/javascript" src="libs/qrcode.js"></script>
+</head>
+
+<body>
+    <div class="loader">
+        <div class="spinner-border text-light center-screen" role="status">
+        </div>
+        <span class="center-screen" style="color: white; font-size: 20px; margin-top:-20px; margin-left:-120px">Please wait...</span>
+    </div>
+    <div id="container" class="container-fluid">
+        <%- include ./navbar.ejs %>
+        <div id="divSidebar" style="padding: 10px">
+            <%- include ./management-sidebar.ejs %>
+        </div>
+        <% if(user.dataValues.role == 'admin') { %>
+            <div id="divCinemaMovieRevenue">
+                <%- include ./revenue.ejs %>
+            </div>
+            <% } %>
+        <div id="divBookTicket">
+            <%- include ./book-ticket.ejs %>
+        </div>
+    </div>
+    <%- include ./footer.ejs %>
+        <script src="js/management-processing.js"></script>
+</body>
+
+</html>

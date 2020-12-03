@@ -1,0 +1,9 @@
+<center>
+    <div class="movie" id="actionMovie">
+        <% movieList.forEach(movie => { %>
+            <% if(movie.dataValues.genre == 'adventure'){ %>
+                <%- include ./movie-content.ejs %>
+            <% } %>
+        <% }); %>
+    </div>
+</center>

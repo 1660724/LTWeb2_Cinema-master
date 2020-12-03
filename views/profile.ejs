@@ -1,0 +1,79 @@
+<div class="tabContent">
+    <span class="movie-title" style="color:skyblue">
+        My Profile
+    </span>
+    <hr style="border: 0.5px solid skyblue" />
+    <div class="row content-in-tab">
+        <div class="col-md-3 profile-content-inside">
+            <% if(user.dataValues.role == 'admin'){ %>
+                <span class="badge badge-danger adminRole">admin</span>
+                <% } else { %>
+                    <span class="badge badge-danger memberRole">member</span>
+                <% } %>
+                <div>
+                    <img src="images/user-avatars/<%= user.avatar %>" class="img-thumbnail" id="profile-avatar" onmouseup="document.getElementById('upload-avatar-button').click()">
+                    <i class='fas fa-camera' id="upload-avatar-icon"></i>
+                    <form enctype="multipart/form-data" id="upload-avatar-form" method="POST">
+                        <input type="file" accept="image/*" id="upload-avatar-button" name="upload-avatar" hidden>
+                        <script>
+                            // var loadFile = function (event) {
+                            //         var output = document.getElementById('profile-avatar');
+                            //         output.src = URL.createObjectURL(event.target.files[0]);
+                            // };
+                        </script>
+                        <input type="submit" id="submit-upload-avatar" formaction="/management/upload-avatar" hidden>
+                    </form>
+                    <center><span id="avatar-uploading-status"><%= avatarUploadingStatus %></span></center>
+                </div>
+
+        </div>
+        <div class="col-md-9" id="profile-info">
+            <div class="clear"></div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div>
+                        Full-name:
+                        <input type="text" class="formInput" id="profile-fullname" value="<%= user.dataValues.name %>" />
+                    </div>
+                    <div style="margin-top:20px">
+                        Email address:
+                        <input type="text" class="formInput" id="profile-email" value="<%= user.dataValues.email %>" disabled/>
+                    </div>
+                    <div>
+                        Phone:
+                        <input type="number" class="formInput" id="profile-phone" value="<%= user.dataValues.phone %>" />
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="member-card">
+                        <div class="member-card-header">
+                            <img src="images/wings_2.png" style="height: 30px; width: 30px;" />
+                            <span style="color:skyblue">Wings
+                                <span style="font-weight:bold; color: white">Cinema</span>
+                            </span>
+                        </div>
+                        <hr style="border: 0.5px solid skyblue">
+                        <div class="row no-gutter" style="width:100%">
+                            <div class="col-6">
+
+                                <div id="qrcode"></div>
+                                <!-- <img src="images/10932659211.png" class="img-thumbnail barcode"> -->
+                            </div>
+                            <div class="col-6" style="padding-top: 40px;">
+                                <span style="color: skyblue; font-weight:bold; font-size:22px;font-family:tahoma; text-shadow: 1px 1px 5px black">Membership</span>
+                            </div>
+                        </div>
+                        <div class="member-card-footer">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                Address:
+                <textarea class="formInput textarea" id="profile-address"><%= user.dataValues.address %></textarea>
+            </div>
+        </div>
+        <button class="btn btn-success" id="update-profile-button">
+            <i class='fas fa-sync-alt'></i> Update profile</button>
+    </div>
+</div>

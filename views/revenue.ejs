@@ -1,0 +1,31 @@
+<div class="tabContent">
+    <span class="movie-title" style="color: skyblue" id="revenueTitle">
+        <i class='fas fa-arrow-left' style='font-size:24px; color: silver; margin-right: 20px' id="backButton"></i>
+        <span id="revenueTitleText">Revenue</span>
+    </span>
+    <hr style="border: 0.5px solid skyblue" />
+    <div id="cinemaRevenueContent">
+        <%- include ./cinema-revenue.ejs %>
+    </div>
+    <div id="movieRevenueContent">
+        <%- include ./movie-revenue.ejs %>
+    </div>
+    <div id="revenueOption" class="row no-gutter">
+        <div class="col-sm-3">
+            <div class="card" id="cinemaRevenueButton">
+                <div class="card-body">
+                    <i class='fas fa-video sidebar-icon' style='font-size:100px'></i>
+                    <div class="card-text revenue-title">Theaters</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="card" id="movieRevenueButton">
+                <div class="card-body">
+                    <i class='fas fa-film sidebar-icon' style='font-size:100px'></i>
+                    <div class="card-text revenue-title">Movies</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

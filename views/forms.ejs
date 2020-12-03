@@ -1,0 +1,100 @@
+<!-- SIGN UP -->
+<div class="modal fade" id="signUpForm" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button id="closeSignUpFormButton" type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-title">Create An Account</div>
+                <center>
+                    <span id="registerAlert" class="alert"></span>
+                </center>
+                Full name
+                <div>
+                    <input type="text" class="formInput" placeholder="Enter your full name" id="registerFullname">
+                </div>
+                Email address
+                <div>
+                    <input type="text" class="formInput" placeholder="Enter your email address" id="registerEmail">
+                </div>
+                Phone number
+                <div>
+                    <input type="number" class="formInput" placeholder="Enter your phone number" id="registerPhone">
+                </div>
+                Address
+                <div>
+                    <textarea class="formInput textarea" placeholder="Enter your address" id="registerAddress" style="margin-bottom:0"></textarea>
+                </div>
+                Password
+                <div>
+                    <input type="password" class="formInput" placeholder="Enter your password" id="registerPassword">
+                </div>
+                Confirmed password
+                <div>
+                    <input type="password" class="formInput" placeholder="Confirm your password" id="registerConfirmedPassword">
+                </div>
+                <div>
+                    <button type="button" class="formButton" id="registerButton" acceptButton>Submit</button>
+                </div>
+                <div>
+                    <a id="signInLink" href="#" data-toggle="modal" data-target="#signInForm">Sign in account</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- SIGN IN -->
+<div class="modal fade" id="signInForm" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button id="closeSignInFormButton" type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div id="divSignIn">
+                    <div class="modal-title">Sign In Account</div>
+                    <center>
+                        <span id="authAlert" class="alert"></span>
+                    </center>
+                    Email address
+                    <div>
+                        <input type="text" class="formInput" placeholder="Enter your email address" id="loginEmail">
+                    </div>
+                    Password
+                    <div>
+                        <input type="password" class="formInput" placeholder="Enter your password" id="loginPassword">
+                    </div>
+                    <div>
+                        <button type="button" class="formButton" id="loginButton">Log in</button>
+                    </div>
+                    <div>
+                        <a href="#" id="createAccountLink" data-toggle="modal" data-target="#signUpForm">Create an account</a>
+                        <br>
+                        <a href="#" id="forgotPasswordLink">Forgot password?</a>
+                    </div>
+                </div>
+                <div id="divResetPassword">
+                    <div class="modal-title">Reset Password</div>
+                    <center>
+                        <span id="resetPasswordAlert" class="alert"></span>
+                    </center>
+                    Email address
+                    <div>
+                        <input type="text" class="formInput" placeholder="Enter your email address" id="resetEmail">
+                    </div>
+                    <div>
+                        <button type="button" class="formButton" id="sendMailButton">Send</button>
+                    </div>
+                    <div>
+                        <a href="#" id="backToSignInLink">Back to sign in</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

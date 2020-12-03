@@ -1,0 +1,52 @@
+<div class="row">
+    <div class="col-sm-3">
+        From Date:
+        <select class="select">
+            <option>21-05-2019</option>
+            <option>22-05-2019</option>
+        </select>
+    </div>
+    <div class="col-sm-3">
+        To Date:
+        <select class="select">
+            <option>21-06-2019</option>
+            <option>22-06-2019</option>
+        </select>
+    </div>
+    <div class="col-sm-4">
+        <!-- <button class="btn btn-info" id="revenueButton">Get records</button> -->
+    </div>
+</div>
+<div id="cinemaRevenueWrapper">
+    <table id="cinemaRevenueListTable">
+        <tbody id="cinemaRevenueList">
+            <tr>
+                <td>No.</td>
+                <td>Cinema</td>
+                <td>
+                    Tickets
+                </td>
+                <td>
+                    Total
+                </td>
+            </tr>
+
+            <% cinemaList.forEach((cinema, index) => { %>
+                <tr>
+                    <td>
+                        <%= index+1 %>
+                    </td>
+                    <td>
+                        <%= cinema.dataValues.name %>
+                    </td>
+                    <td>
+                        2400
+                    </td>
+                    <td>
+                        500.000.000 VND
+                    </td>
+                </tr>
+                <% }); %>
+        </tbody>
+    </table>
+</div>

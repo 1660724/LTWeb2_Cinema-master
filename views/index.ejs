@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <%- include ./head-template.ejs %>
+        <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/index-style.css" />
+        <title>Wings Cinema</title>
+</head>
+
+<body>
+    <!-- <div id="hotline" class="bottom-right-screen">
+        <img src="images/hotline.gif" style="width:40px; height:40px"/> <span style="color: white; font-weight:bold; font-size: 20px; text-shadow: 1.5px 1.5px black">Hotline: 0999.999.999</span>
+    </div> -->
+    <div class="loader">
+        <div class="spinner-border text-light center-screen" role="status">
+        </div>
+        <span class="center-screen" style="color: white; font-size: 20px; margin-top:-20px; margin-left:-120px">Please wait...</span>
+    </div>
+    <div id="container" class="container-fluid">
+        <%- include ./navbar.ejs %>
+            <%- include ./header.ejs %>
+                <div id="divIndexSidebar">
+                    <span id="indexSidebarTitle" class="movie-title">
+                        <i class='fas fa-film sidebar-icon' style='font-size:30px'></i> Now Showing</span>
+                    <hr style="border: 0.5px solid skyblue" />
+                    <%- include ./sidebar.ejs %>
+                </div>
+                <%- include ./forms.ejs %>
+    </div>
+    <%- include ./footer.ejs %>
+    <script src="js/index-processing.js"></script>
+</body>
+
+</html>

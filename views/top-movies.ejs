@@ -1,0 +1,251 @@
+<center>
+    <div class="movie" id="topMovies">
+        <% movieList.forEach((movie,index) => { %>
+            <% if(index < 12){ %>
+                <div class="card">
+                    <img src="images/posters/<%= movie.dataValues.poster %>" class="card-img-top">
+                    <div class="card-body">
+                        <span class="card-title" style="color:white; font-weight:bold">
+                            <%= movie.name %>
+                        </span>
+                        <p class="card-text">
+                            <span>Genre: 
+                                <% if(movie.genre === 'sciencefiction') { %>
+                                    science fiction
+                                <% } else { %>
+                                    <%= movie.genre %>
+                                <% } %>
+                            </span>
+                            <br>
+                            <span>Release Date:
+                                <%= movie.dataValues.release %>
+                            </span>
+                            <br>
+                            <span>Duration:
+                                <%= movie.dataValues.duration %> minutes
+                            </span>
+                        </p>
+                        <% if(email){ %>
+                            <center>
+                                <div class="row no-gutter" style="width:100%">
+                                    <div class="col-6">
+                                        <button class="btn btn-success booking" value="<%= movie.dataValues.id %><%= movie.dataValues.release %>" style="height:100%" data-toggle="modal"
+                                            data-target="#topMovieBooking-<%= movie.dataValues.id %>">
+                                            <i class='fas fa-tags' style='font-size:16px'></i> Booking</button>
+                                    </div>
+                                    <div class="col-6">
+                                        <button class="btn btn-info movie-details" value="<%= movie.id %>"  id="movieInfoButton-<%= movie.dataValues.id %>" data-toggle="modal" data-target="#topMovieInfo-<%= movie.dataValues.id %>">Details</button>
+                                    </div>
+                                </div>
+                            </center>
+                            <% } else { %>
+                                <center>
+                                    <button class="btn btn-info movie-details" value="<%= movie.id %>" id="movieInfoButton-<%= movie.dataValues.id %>" data-toggle="modal" data-target="#topMovieInfo-<%= movie.dataValues.id %>">Details</button>
+                                </center>
+                                <% } %>
+                    </div>
+                </div>
+                
+                <div class="modal fade movie-info" id="topMovieInfo-<%= movie.dataValues.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-lg" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header" style="border: 0">
+                                <img src="images/wings_2.png" style="height: 30px; width: 30px; margin-right:5px" /> Movie Details
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row no-gutter">
+                                    <div class="col-sm-4">
+                                        <img src="images/posters/<%= movie.dataValues.poster %>" class="img-thumbnail movie-info-poster">
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <table>
+                                            <tbody>
+                                                <tr>
+                                                    <td colspan="2"><h5 class="movie-info-title" style="color: skyblue; font-size:20px">
+                                                            <%= movie.dataValues.name %>
+                                                        </h5></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span class="movie-info-title">Genre: </span></td>
+                                                    <td><span>
+                                                            <% if(movie.genre === 'sciencefiction') { %>
+                                                                science fiction
+                                                            <% } else { %>
+                                                                <%= movie.genre %>
+                                                            <% } %>
+                                                        </span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span class="movie-info-title">Release Date: </span></td>
+                                                    <td><span>
+                                                            <%= movie.dataValues.release %>
+                                                        </span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span class="movie-info-title">Duration: </span></td>
+                                                    <td><span>
+                                                            <%= movie.dataValues.duration %> minutes</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span>
+                                                            <!-- <i class='far fa-eye' style='font-size:16px'></i> -->
+                                                            <span class="movie-info-title">Views:</span>
+                                                        </span></td>
+                                                    <td>200.000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span class="movie-info-title">Votes:</span></td>
+                                                    <td><i class='fas fa-star'></i>
+                                                        <i class='fas fa-star'></i>
+                                                        <i class='fas fa-star'></i>
+                                                        <i class='fas fa-star'></i>
+                                                        <i class='fas fa-star'></i></td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="2"><span class="movie-info-title">Description: </span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="2">
+                                                        <p style="text-align: justify">
+                                                            <%= movie.dataValues.description %>
+                                                        </p>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div style="margin-top:10px">
+                                    <span class="movie-info-title">Trailer:</span>
+                                    <div id="topTrailer-<%= movie.dataValues.id %>" class="trailer"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="modal fade" id="topMovieBooking-<%= movie.dataValues.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-lg" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header" style="border: 0">
+                                <img src="images/wings_2.png" style="height: 30px; width: 30px; margin-right:5px" />Booking
+                                <button id="closeTopBookingButton-<%= movie.dataValues.id %>" type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body" id="bookingContent">
+                                <div class="row no-gutter" id="booking">
+                                    <div class="col-sm-3">
+                                        <% showingDateList.forEach(showingDate => { %>
+                                        <% if(showingDate.dataValues.movieid === movie.dataValues.id) { %>
+                                        <% if(showingDate.dataValues.date !== movie.dataValues.release) { %>
+                                        <div class="nav flex-column nav-pills" role="tablist" aria-orientation="vertical">
+                                            <button class="nav-link topShowingDate tabShowingDate" value="<%= movie.dataValues.id %><%= showingDate.dataValues.date %>" id="tabTopShowingDate-<%= movie.dataValues.id %><%= showingDate.dataValues.date %>" data-toggle="pill" href="#topShowingCinemaList-<%= movie.dataValues.id %><%= showingDate.dataValues.date %>" role="tab" role="tab" aria-selected="false">
+                                                <%= showingDate.dataValues.date %></button>
+                                        </div>
+                                        <% } else { %>
+                                        <div class="nav flex-column nav-pills" role="tablist" aria-orientation="vertical">
+                                            <button class="nav-link active topShowingDate tabShowingDate" value="<%= movie.dataValues.id %><%= showingDate.dataValues.date %>" id="tabTopShowingDate-<%= movie.dataValues.id %><%= showingDate.dataValues.date %>" data-toggle="pill" href="#topShowingCinemaList-<%= movie.dataValues.id %><%= showingDate.dataValues.date %>" role="tab" role="tab" aria-selected="true">
+                                                <%= showingDate.dataValues.date %></button>
+                                        </div>
+                                        <% } %>
+                                        <% } %>
+                                        <% }); %>
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <div class="tab-content">
+                                            <% showingDateList.forEach(showingDate => { %>
+                                            <% if(showingDate.dataValues.movieid === movie.dataValues.id) { %>
+                                            <% if(showingDate.dataValues.date !== movie.dataValues.release) { %>
+                                            <div class="tab-pane fade" id="topShowingCinemaList-<%= movie.dataValues.id %><%= showingDate.dataValues.date %>" role="tabpanel">
+                                            <% } else { %>
+                                            <div class="tab-pane fade show active" id="topShowingCinemaList-<%= movie.dataValues.id %><%= showingDate.dataValues.date %>" role="tabpanel">                                            
+                                            <% } %>
+                                                <div class="divBooking">
+                                                    <div class="bookingSeat" id="topBookingSeat-<%= movie.dataValues.id %><%= showingDate.dataValues.date %>">
+                                                        <div class="seat-area">
+                                                            <div style="padding: 5px; width:100%; text-align:center; background-color: rgba(0,0,0,0.4)">
+                                                                <button id="topBackToCinemaButton-<%= movie.dataValues.id %><%= showingDate.dataValues.date %>" value="<%= movie.dataValues.id %><%= showingDate.dataValues.date %>" style="float: left; background-color: rgba(0,0,0,0); border:0; text-align:left; color:white;font-size:16px" class="backToCinemaButton">
+                                                                    <!-- <i class='fas fa-arrow-left' style='font-size:20px'></i> -->
+                                                                    Back
+                                                                </button>
+                                                                <center>
+                                                                <div style="margin-left:-40px; box-shadow:2px 2px 5px black;background-color: rgba(125,125,125,0.2); padding: 2px; padding-left: 10px; padding-right: 10px; font-size:14px; display:inline-block; width:50%;">SCREEN</div>
+                                                                </center>
+                                                            </div>
+                                                            <div style="background-color: rgba(0,0,0,0.4); height:100%; width:100%; padding:5px; padding-bottom:10px">
+                                                                <div id="topSeats-<%= movie.dataValues.id %><%= showingDate.dataValues.date %>" class="seats"></div>
+                                                                <div style="margin-top:30px;padding: 10px; padding-top:10px; padding-bottom:10px; font-size:14px; font-weight: bold; text-shadow: 2px 2px 10px black; background-color: rgba(0,0,0,0.6)">
+                                                                    <div style="color:gray">
+                                                                        <i class='fas fa-square' style="color:gray"></i> Unchecked</div>
+                                                                    <div style="color:#4BB543">
+                                                                        <i class='fas fa-square' style="color:#4BB543"></i> Checked</div>
+                                                                    <div style="color:#B33A3A">
+                                                                        <i class='fas fa-square' style="color:#B33A3A"></i> Booked</div>
+                                                                </div>
+                                                            </div>
+                                                            
+                                                        </div>
+                                    
+                                                        <div style="padding: 10px; margin-bottom: 0px; font-size: 16px; text-shadow: 2px 2px 10px black">
+                                                            <span style="font-weight: bold; color: skyblue"><%= movie.dataValues.name %></span>
+                                                            <br>
+                                                            <span>Seats: </span>
+                                                            <span style="font-weight:bold" id="topChosenSeats-<%= movie.dataValues.id %><%= showingDate.dataValues.date %>"></span>
+                                                            <br>
+                                                            <span>Showing at: </span><span style="font-weight:bold" id="topBookingDate-<%= movie.dataValues.id %><%= showingDate.dataValues.date %>"><%= showingDate.dataValues.date %></span> <span id="topBookingTime-<%= movie.dataValues.id %><%= showingDate.dataValues.date %>" style="font-weight:bold"></span>
+                                                            <br>
+                                                            <span>Theater: </span><span style="font-weight:bold" id="topBookingCinema-<%= movie.dataValues.id %><%= showingDate.dataValues.date %>"></span>
+                                                            <span style="font-weight:bold">(<span id="topBookingRoom-<%= movie.dataValues.id %><%= showingDate.dataValues.date %>"></span>)</span>
+                                                            <br>
+                                                            <p style="font-weight:bold; font-size: 20px">Total: 
+                                                                <span id="topBookingTotal-<%= movie.dataValues.id %><%= showingDate.dataValues.date %>"></span> VND
+                                                            </p>
+                                                        </div>
+                                                        <center>
+                                                            <button id="topBookingFinishButton-<%= movie.dataValues.id %><%= showingDate.dataValues.date %>" value="<%= movie.dataValues.id %>_<%= showingDate.dataValues.date %>" class="btn btn-success finishBookingButton" data-toggle="modal"
+                                                                data-target="#booked-tickets">
+                                                                Finish
+                                                            </button>
+                                                        </center>
+                                                    </div>
+                                                    <table id="topBookingCinemaTable-<%= movie.dataValues.id %><%= showingDate.dataValues.date %>">
+                                                        <tbody id="bookingCinema">
+                                                                <% cinemaList.forEach((cinema,index) => { %>
+                                                                <tr>
+                                                                    <td style="width: 60%; font-size:16px">
+                                                                        <span id="topBookingCinemaName-<%= movie.dataValues.id %><%= showingDate.dataValues.date %>_<%= index %>"><%= cinema.dataValues.name %></span>
+                                                                    </td>
+                                                                    <td style="width: 40%">
+                                                                    <% showingList.forEach(showing => { %>
+                                                                        <% if(showing.dataValues.movieid === movie.dataValues.id && showing.dataValues.date === showingDate.dataValues.date && Number(showing.room.cinemaid) === cinema.id){ %>                                                                                                              
+                                                                            <button id="topShowingTime-<%= movie.dataValues.id %><%= showingDate.dataValues.date %><%= showing.dataValues.starttime %>" class="badge badge-primary showings" value="<%= movie.dataValues.id %><%= showingDate.dataValues.date %>_<%= index %>_<%= cinema.dataValues.address %>_<%= showing.dataValues.roomid %>_<%= showing.dataValues.price %>_<%= showing.room.name %>" style="border:0">
+                                                                                <%= showing.dataValues.starttime %>
+                                                                            </button>
+                                                                        <% } %>
+                                                                    <% }); %>
+                                                                    </td>
+                                                                </tr>
+                                                                <% }); %>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <% } %>
+                                            <% }); %>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <% } %>
+        <% }); %>
+    </div>
+</center>

@@ -1,0 +1,128 @@
+<div class="row" id="sidebar">
+    <div class="col-sm-2" id="leftSidebar">
+        <p class="movie-kind" style="color: gray; padding-bottom: 0">
+            Movie Genres
+        </p>
+        <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+            <a id="topMovieTab" data-toggle="pill" href="#topMovie" role="tab">Top Movies
+                <span class="badge badge-danger">HOT</span>
+            </a>
+            <a id="actionTab" class="normal-movie" data-toggle="pill" href="#action" role="tab">Action Movies</a>
+            <a id="scienceFictionTab" class="normal-movie" data-toggle="pill" href="#scienceFiction" role="tab">Science Fiction Movies</a>
+            <a id="adventureTab" class="normal-movie" data-toggle="pill" href="#adventure" role="tab">Adventure Movies</a>
+            <a id="crimeTab" class="normal-movie" data-toggle="pill" href="#crime" role="tab">Crime Movies</a>
+            <a id="horrorTab" class="normal-movie" data-toggle="pill" href="#horror" role="tab">Horror Movies</a>
+            <a id="dramaTab" class="normal-movie" data-toggle="pill" href="#drama" role="tab">Drama Movies</a>
+            <a id="historicalTab" class="normal-movie" data-toggle="pill" href="#historical" role="tab">Historical Movies</a>
+            <a id="musicalTab" class="normal-movie" data-toggle="pill" href="#musical" role="tab">Musical Movies</a>
+            <a id="comedyTab" class="normal-movie" data-toggle="pill" href="#comedy" role="tab">Comedy Movies</a>
+            <a id="cartoonTab" class="normal-movie" data-toggle="pill" href="#cartoon" role="tab">Cartoon Movies</a>
+
+        </div>
+    </div>
+    <div class="col-sm-10" id="col-tab-content">
+        <div class="tab-content" id="tabContent">
+
+            <div class="tab-pane fade show active" id="topMovie" role="tabpanel">
+                <div class="tab-content" id="movieContent">
+                    <div class="movie-title" style="margin-left:20px; margin-bottom:10px">
+                        Top Movies
+                        <span class="badge badge-danger">HOT</span>
+                    </div>
+                    <div id="top-movie-content">
+                        <%- include ./top-movies.ejs %>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="action" role="tabpanel">
+                <div class="tab-content" id="movieContent">
+                    <div class="movie-title" style="margin-left:20px; margin-bottom:10px">
+                        Action Movies
+                    </div>
+                    <%- include ./action-movies.ejs %>
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="scienceFiction" role="tabpanel">
+                <div class="tab-content" id="movieContent">
+                    <div class="movie-title" style="margin-left:20px; margin-bottom:10px">
+                        Science Fiction Movies
+                    </div>
+                    <%- include ./science-fiction-movies.ejs %>
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="adventure" role="tabpanel">
+                <div class="tab-content" id="movieContent">
+                    <div class="movie-title" style="margin-left:20px; margin-bottom:10px">
+                        Adventure Movies
+                    </div>
+                    <%- include ./adventure-movies.ejs %>
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="crime" role="tabpanel">
+                <div class="tab-content" id="movieContent">
+                    <div class="movie-title" style="margin-left:20px; margin-bottom:10px">
+                        Crime Movies
+                    </div>
+                    <%- include ./crime-movies.ejs %>
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="horror" role="tabpanel">
+                <div class="tab-content" id="movieContent">
+                    <div class="movie-title" style="margin-left:20px; margin-bottom:10px">
+                        Horror Movies
+                    </div>
+                    <%- include ./horror-movies.ejs %>
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="drama" role="tabpanel">
+                <div class="tab-content" id="movieContent">
+                    <div class="movie-title" style="margin-left:20px; margin-bottom:10px">
+                        Drama Movies
+                    </div>
+                    <%- include ./drama-movies.ejs %>
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="historical" role="tabpanel">
+                <div class="tab-content" id="movieContent">
+                    <div class="movie-title" style="margin-left:20px; margin-bottom:10px">
+                        Historical Movies
+                    </div>
+                    <%- include ./historical-movies.ejs %>
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="musical" role="tabpanel">
+                <div class="tab-content" id="movieContent">
+                    <div class="movie-title" style="margin-left:20px; margin-bottom:10px">
+                        Musical Movies
+                    </div>
+                    <%- include ./musical-movies.ejs %>
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="comedy" role="tabpanel">
+                <div class="tab-content" id="movieContent">
+                    <div class="movie-title" style="margin-left:20px; margin-bottom:10px">
+                        Comedy Movies
+                    </div>
+                    <%- include ./comedy-movies.ejs %>
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="cartoon" role="tabpanel">
+                <div class="tab-content" id="movieContent">
+                    <div class="movie-title" style="margin-left:20px; margin-bottom:10px">
+                        Cartoon Movies
+                    </div>
+                    <%- include ./cartoon-movies.ejs %>
+                </div>
+            </div>
+        </div>
+    </div>

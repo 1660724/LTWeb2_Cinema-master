@@ -1,0 +1,483 @@
+body, html {
+    height: 100%
+}
+
+body {
+    background-color: #222222;
+    overflow-x: hidden;
+}
+
+.modal-content {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: whitesmoke;
+    font-size: 18px;
+}
+
+.modal-title {
+    font-size: 25px;
+    display: table;
+    margin: 0 auto;
+    font-weight: bold;
+}
+
+#signInForm .modal-header, #signUpForm .modal-header {
+    border: 0;
+}
+
+#signInForm .modal-body, #signUpForm .modal-body {
+    padding: 50px;
+    padding-top: 0;
+}
+
+#signInForm a, #signUpForm a {
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 16px;
+}
+
+.formButton, .formInput {
+    width: 100%;
+    margin-bottom: 10px;
+    background-color: rgba(125, 125, 125, 0.2);
+    border: 0;
+    border-radius: 5px;
+    padding: 5px;
+    color: whitesmoke;
+}
+
+.formButton {
+    background-color: green;
+    padding: 8px;
+    margin-top: 5px;
+    transition: 0.2s;
+}
+
+.formButton:hover {
+    opacity: 0.8;
+}
+
+#container {
+    padding: 0;
+}
+
+.darkButton {
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 0;
+    padding: 8px;
+    border-radius: 5px;
+    color: white;
+    transition: 0.2s;
+}
+
+.darkButton:hover {
+    transform: scale(1.05, 1.05);
+}
+
+#header {
+    z-index: -1;
+}
+
+#header img {
+    opacity: 0.8;
+}
+
+.carousel-item h5 {
+    text-shadow: 2px 2px 10px black;
+}
+
+#header img {
+    height: 470px;
+    width: 100%;
+}
+
+#navbar {
+    background-color: #222222;
+    width: 100%;
+    box-shadow: 2px 4px 10px black;
+    font-size: 18px;
+}
+
+@-webkit-keyframes rotateX-effect{
+    from{
+        -webkit-transform: rotateX(180deg)
+    } to {
+        -webkit-transform: rotateX(360deg)
+    }
+}
+
+#navbar a {
+    text-decoration: none;
+    color: skyblue;
+    margin-top: 5px;
+    margin-right: 20px;
+    transition: 0.2s;
+}
+
+#navbar a:not(#brand):hover {
+    transform: scale(1.05, 1.05);
+}
+
+.navbar-icon {
+    color: skyblue;
+    margin-right: 2px;
+}
+
+.success {
+    background: green;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    width: 100%;
+    border: 0;
+    transition: 0.2s;
+}
+
+.success:hover {
+    transform: scale(1.05, 1.05);
+}
+
+#sidebar {
+    width: 100%;
+    color: white;
+    margin: auto;
+    padding-right: 0;
+    padding-bottom: 30px;
+    font-size: 18px;
+}
+
+#leftSidebar {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    margin-top: 10px;
+    box-shadow: 2px 4px 10px black;
+    border-radius: 7px;
+}
+
+#v-pills-tab a {
+    margin-bottom: 2px;
+}
+
+#sidebar a:focus {
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+}
+
+#sidebar a {
+    text-decoration: none;
+    padding: 10px;
+    color: gray;
+    border: 0;
+    transition: 0.2s;
+}
+
+#sidebar a:hover {
+    transform: scale(1.05, 1.05);
+}
+
+#divIndexSidebar {
+    padding: 20px;
+    box-shadow: 2px 4px 10px black;
+    margin: 20px;
+    margin-bottom: 40px;
+    border-radius: 5px;
+}
+
+#indexSidebarTitle {
+    color: skyblue;
+}
+
+#movieTab a {
+    text-decoration: none;
+    color: gray;
+}
+
+#movieTab {
+    border: 0;
+}
+
+#movieContent {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 7px;
+    box-shadow: 2px 4px 10px black;
+}
+
+.movie {
+    width: 100%;
+    height: auto;
+    padding: 10px !important;
+    font-size: 16px;
+}
+
+.movie-kind {
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+}
+
+.movie-title {
+    padding: 40px;
+    padding-left: 10px;
+    padding-top: 20px;
+    padding-bottom: 0;
+    font-size: 25px;
+    color: gray;
+    font-weight: bold;
+}
+
+.movie .card {
+    background-color: rgba(0, 0, 0, 0.4);
+    color: gray;
+    transition: 0.2s;
+    width: 17rem;
+    display: inline-block;
+    margin: 2px;
+    margin-bottom: 5px;
+    text-align: left;
+    font-size: 18px;
+}
+
+@-webkit-keyframes focus-effect {
+    from{
+        -webkit-transform: scale(6,6)
+    } to {
+        -webkit-transform: scale(1,1)
+    }
+}
+
+.movie .card:hover {
+    transform: scale(1.03, 1.03);
+    color: white;
+    opacity: 1;
+}
+
+.movie-info {
+    text-align: left;
+}
+
+.movie-info .modal-body {
+    padding-bottom: 30px;
+}
+
+.movie-info-title {
+    font-weight: bold;
+}
+
+.movie-info-poster {
+    height: 300px;
+    width: 220px;
+}
+
+.fa-star {
+    color: yellow !important;
+    text-shadow: 0 0 5px gold;
+}
+
+.movie .card button {
+    width: 95%;
+}
+
+#hotLabel {
+    width: 50px;
+    padding: 10px;
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    right: 0;
+}
+
+.movie .card img {
+    height: 350px;
+}
+
+.movie i {
+    color: white;
+}
+
+#movieTab li {
+    background-color: rgba(0, 0, 0, 0.2);
+    margin-right: 2px;
+    margin-top: 2px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+
+#divCinemaInfo table{
+    width: 100%;
+}
+
+#divCinemaInfo td{
+    padding: 5px;
+}
+
+#divCinemaInfo td:nth-child(1){
+    width: 10%;
+}
+#divCinemaInfo td:nth-child(2){
+    width: 35%;
+}
+#divCinemaInfo td:nth-child(3){
+    width: 35%;
+}
+#divCinemaInfo td:nth-child(4){
+    width: 20%;
+}
+#divCinemaInfo tr:nth-child(odd){
+    background-color: rgba(125, 125, 125, 0.2);
+}
+#divCinemaInfo tr:hover{
+    background-color: rgba(0, 0, 0, 0.8);
+    color: skyblue;
+}
+#footer i:hover {
+    transform: scale(1.5, 1.5);
+}
+
+#footer {
+    background-color: rgba(0, 0, 0, 0.2);
+    height: auto;
+    width: 100%;
+    color: gray;
+    font-size: 18px;
+    padding: 30px;
+}
+
+#footer i {
+    padding: 10px;
+    padding-bottom: 0;
+    transition: 0.2s;
+}
+
+#footerInfo {
+    display: table;
+    margin: 0 auto;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+#footerSocialNetwork {
+    display: table;
+    margin: 0 auto;
+}
+
+#footerSocialNetwork i {
+    font-size: 25px;
+    padding: 20px;
+    padding-top: 10px;
+    padding-bottom: 0;
+}
+
+#col-tab-content {
+    margin-top: 10px;
+    padding: 0;
+    padding-left: 15px;
+}
+
+@media screen and (max-width: 576px) {
+    #divIndexSidebar{   
+        margin: 0;
+    }
+    .modal-body {
+        font-size: 16px;
+    }
+    .modal-title {
+        font-size: 20px;
+    }
+    #sidebar {
+        padding: 0px;
+        padding-bottom: 30px;
+    }
+    #col-tab-content {
+        padding: 0;
+    }
+    #footer{
+        margin-top: 20px;
+    }
+}
+
+.trailer iframe{
+    width: 100% !important;
+    height: 500px;
+}
+
+#divCinemaInfo{
+    font-size: 16px;
+    height: 270px;
+    overflow: auto;
+}
+
+#cinemaMap{
+    padding: 25px;
+}
+#cinemaMap iframe{
+    width: 100%;
+    height: 300px;
+}
+
+.loader {
+    background-color: rgba(0, 0, 0, 0.9);
+    height: 100%;
+    width: 100%;
+    z-index: 10000000;
+    position: fixed;
+}
+
+.center-screen {
+    position: fixed;
+    top:55%;
+    left:55%;
+    margin-top: -60px;
+    margin-left: -85px;
+}
+
+.bottom-right-screen {
+    position: fixed;
+    top:100%;
+    left:100%;
+    margin-top: -50px;
+    margin-left: -270px;
+    z-index:8;
+}
+
+.map {
+    opacity: 0.7;
+}
+
+#mainPointMap {
+    height: 250px;
+    width: 100%;
+    display: table;
+    margin: 0 auto;
+}
+
+.alert {
+    font-size: 16px;
+    text-align: center;
+}
+
+.row.no-gutter {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.row.no-gutter>[class*='col-'] {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+
+::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+}

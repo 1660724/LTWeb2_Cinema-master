@@ -1,0 +1,31 @@
+<div class="row" id="profile-sidebar">
+    <div class="col-sm-2" id="left-profile-sidebar">
+        <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+            <a id="profileTab" data-toggle="pill" href="#profile" role="tab">
+                <i class='fas fa-address-card profile-sidebar-icon' style='font-size:26px'></i>My Profile
+            </a>
+            <a id="historyTab" data-toggle="pill" href="#history" role="tab">
+                <i class='fas fa-sticky-note profile-sidebar-icon' style='font-size:26px'></i> History
+            </a>
+            <a id="changePasswordTab" data-toggle="pill" href="#change-password" role="tab">
+                <i class='fas fa-lock profile-sidebar-icon' style='font-size:24px'></i> Change Password
+            </a>
+        </div>
+    </div>
+    <div class="col-sm-10" id="col-tab-content">
+        <div class="tab-content" id="tabContent">
+
+            <div class="tab-pane fade show active" id="profile" role="tabpanel" >
+                <%- include ./profile.ejs %>
+            </div>
+            
+            <div class="tab-pane fade" id="history" role="tabpanel" >
+                <%- include ./history.ejs %>
+            </div>
+
+            <div class="tab-pane fade" id="change-password" role="tabpanel" >
+                <%- include ./change-password.ejs %>
+            </div>
+        </div>
+    </div>
+</div>

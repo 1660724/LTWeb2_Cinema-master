@@ -1,0 +1,54 @@
+<nav class="navbar navbar-expand-lg" id="navbar">
+    <a class="navbar-brand" href="#" id="brand">
+        <img src="images/wings_2.png" style="height: 50px; width: 50px" /> Wings
+        <b>
+            <span style="color:white">Cinema</span>
+        </b>
+    </a>
+    <button class="navbar-toggler" id="toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span style="color: white">☰</span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+            <% if(email) { %>
+            <li class="nav-item">
+                <a id="tabBookTicket" class="nav-link success" href="#">
+                    <i class='fas fa-tags navbar-icon' style='font-size:20px'></i> Booking</a>
+            </li>
+            <% } %>
+            <li class="nav-item">
+                <a id="tabCinemaInfo" class="nav-link" href="#" data-toggle="modal" data-target="#cinemaInfoForm">
+                    <i class='fas fa-video' style='font-size:24px; margin-right:5px'></i>Theaters</a>
+            </li>
+            <% if(email && user.dataValues.role == 'admin'){ %>
+            <li class="nav-item">
+                <a id="tabRevenue" class="nav-link" data-toggle="pill" href="#revenue" role="tab">
+                <i class='fas fa-chart-bar' style='font-size:24px; margin-right: 5px'></i>Revenue</a>
+            </li>
+            <% } %>
+            <% if(!email) { %>
+            <li class="nav-item">
+                <a id="tabSignUp" class="nav-link" href="#" data-toggle="modal" data-target="#signUpForm">
+                    <i class='fas fa-user-plus' style='font-size:20px; margin-right:5px'></i>Sign up</a>
+            </li>
+            <li class="nav-item">
+                <a id="tabSignIn" class="nav-link" href="#" data-toggle="modal" data-target="#signInForm">
+                    <i class='fas fa-sign-in-alt navbar-icon' style='font-size:24px; margin-right:5px'></i>Sign in</a>
+            </li>
+            <% } %>
+            <% if(email) { %>
+            <li class="nav-item">
+                <a id="tabHome" class="nav-link" href="#">
+                    <i class='fas fa-user-alt navbar-icon' style='font-size:20px'></i></i> Account</a>
+            </li>
+            <li class="nav-item">
+                <a id="tabSignOut" class="nav-link" href="/logout">
+                    <i class='fas fa-power-off navbar-icon' style='font-size:20px'></i> Sign out</a>
+            </li>
+            <% } %>
+        </ul>
+    </div>
+</nav>
+<%- include ./cinemas.ejs %>

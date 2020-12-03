@@ -1,0 +1,738 @@
+body, html {
+    height: 100%
+}
+
+body {
+    background-color: #222222;
+    overflow-x: hidden;
+}
+
+.modal-content {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: whitesmoke;
+    font-size: 18px;
+}
+
+.modal-title {
+    font-size: 25px;
+    display: table;
+    margin: 0 auto;
+    font-weight: bold;
+}
+
+#signInForm .modal-header, #signUpForm .modal-header {
+    border: 0;
+}
+
+#signInForm .modal-body, #signUpForm .modal-body {
+    padding: 50px;
+    padding-top: 0;
+}
+
+#signInForm a, #signUpForm a {
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 16px;
+}
+
+.formButton, .formInput, .changePasswordInput {
+    width: 100%;
+    margin-bottom: 10px;
+    background-color: rgba(0, 0, 0, 0.2) !important;
+    border: 0;
+    border-radius: 5px;
+    padding: 5px;
+    color: whitesmoke;
+}
+
+.changePasswordInput{
+    padding: 8px;
+}
+
+.row .formInput {
+    margin-right: 10px;
+}
+
+.textarea {
+    width: 100%;
+    height: 173px;
+    background-color: rgba(0, 0, 0, 0.2) !important;
+    border: 0;
+    border-radius: 5px;
+    padding: 10px;
+    color: whitesmoke;
+    text-align: left;
+}
+
+.formInput option {
+    background-color: black;
+    color: white;
+}
+
+.formButton {
+    background-color: green;
+    padding: 8px;
+    margin-top: 5px;
+    transition: 0.2s;
+}
+
+.formButton:hover {
+    opacity: 0.8;
+}
+
+#editImageButton {
+    display: table;
+    margin: 0 auto;
+    width: 80px;
+}
+
+#changePasswordButton {
+    margin-top: 5px;
+}
+
+.darkButton {
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 0;
+    padding: 8px;
+    border-radius: 5px;
+    font-size: 18px;
+    color: silver;
+    transition: 0.2s;
+    box-shadow: 1px 1px 5px black;
+}
+
+.darkButton:hover {
+    transform: scale(1.05, 1.05);
+}
+
+#header {
+    height: 450px;
+}
+
+#header img {
+    opacity: 0.7;
+}
+
+.carousel-item h5 {
+    text-shadow: 2px 2px 10px black;
+}
+
+#header img {
+    height: 470px;
+    width: 100%;
+}
+
+#navbar a:not(#brand):hover {
+    transform: scale(1.05, 1.05);
+}
+
+.navbar-icon {
+    color: skyblue !important;
+}
+
+.navbar-brand {
+    margin-left: 0 !important;
+}
+
+#profile-sidebar {
+    width: 100%;
+    color: white;
+    margin: auto;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.profile-sidebar-icon {
+    color: skyblue;
+    margin-right: 5px;
+    margin-top: 5px;
+}
+
+#tabSignOut i {
+    color: silver;
+}
+
+.memberRole, .adminRole {
+    padding: 5px;
+    font-size: 12px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 0;
+    text-shadow: 1px 1px 2px black;
+}
+
+.memberRole {
+    background-color: green;
+}
+
+#left-profile-sidebar {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border-radius: 7px;
+    box-shadow: 2px 4px 10px black;
+}
+
+#profile-sidebar a:focus {
+    background-color: rgba(0, 0, 0, 0.4);
+    box-shadow: 1px 1px 5px black;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+#profile-sidebar a {
+    text-decoration: none;
+    padding: 10px;
+    color: silver;
+    border: 0;
+    transition: 0.2s;
+}
+
+#left-profile-sidebar a {
+    color: skyblue;
+}
+
+#profile-sidebar a:hover {
+    transform: scale(1.05, 1.05);
+}
+
+.profile-content-inside {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding-top: 30px;
+    padding-bottom: 20px;
+    border-radius: 5px;
+}
+
+#profile-info {
+    width: 100%;
+    margin-bottom: -15px;
+    color: silver;
+    font-size: 18px;
+}
+
+.success {
+    background: green;
+    color: white !important;
+    border-radius: 5px;
+    text-align: center;
+    width: 90%;
+    margin-left: 0;
+}
+
+.btn-success {
+    background: green;
+    border: 0;
+}
+
+.success i {
+    color: white !important;
+}
+
+#tabBookTicket {
+    width: 90%;
+}
+
+#update-profile-button {
+    display: table;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+#update-profile-button:disabled{
+    background-color: #d9534f;
+}
+
+.formInput:disabled{
+    color: gray;
+}
+
+#divBookTicket {
+    padding: 10px;
+    margin-top: 10px;
+}
+
+#bookTicketContent {
+    padding: 20px;
+    color: skyblue;
+    margin-bottom: 5px;
+    box-shadow: 2px 4px 10px black;
+    border-radius: 5px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+#revenueTitleText, #bookingTitleText {
+    color: skyblue;
+}
+
+#change-password-content {
+    padding: 20px;
+    width: 50%;
+    color: silver;
+    font-size: 18px;
+    height: 513px;
+}
+
+.tabContent {
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: auto;
+    padding: 25px;
+    padding-right: 15px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    border-radius: 7px;
+    box-shadow: 2px 4px 10px black;
+}
+
+#profile-avatar {
+    height: 170px;
+    width: 170px;
+    border-radius: 50%;
+    display: table;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#upload-avatar-icon{
+    color: white;
+    border: 0;
+    font-size: 30px;
+    position: absolute;
+    z-index: -1;
+    top: 23%;
+    left: 45%;
+    cursor: pointer;
+}
+
+#profile-avatar:hover{
+    opacity: 0.5;
+}
+
+.barcode {
+    height: 100px;
+    width: 100px;
+    display: table;
+    margin: 0 auto;
+    margin-top: 13px;
+    margin-bottom: 10px;
+    border: 5px solid skyblue;
+}
+
+.member-card {
+    background-color: rgba(125, 125, 125, 0.2);
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    padding-bottom: 0;
+    box-shadow: 4px 10px 20px black;
+}
+
+.member-card-header {
+    height: 35px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    padding: 13px;
+}
+
+.member-card-footer {
+    height: 30px;
+    border-bottom-left-radius: 15px !important;
+    border-bottom-right-radius: 15px !important;
+    background-color: skyblue;
+}
+
+.movie-info table{
+    width: 100%;
+}
+.movie-info table td{
+    padding: 2px;
+}
+
+.member-card-footer {
+    border-bottom-right-radius: 7px;
+    border-bottom-left-radius: 7px;
+    margin-top: 18px;
+}
+
+.clear {
+    clear: both;
+}
+
+.content-in-tab {
+    padding: 20px;
+    padding-bottom: 0;
+}
+
+#hotLabel {
+    width: 50px;
+    padding: 10px;
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    right: 0;
+}
+
+#revenue-content {
+    height: 515px;
+}
+
+.revenue-title {
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+#revenueButton {
+    margin-top: 22px;
+    font-size: 16px;
+}
+
+#historyWrapper, #cinemaWrapper, #cinemaRevenueWrapper {
+    height: 500px;
+    width: 100%;
+    margin: auto;
+    margin-top: 30px;
+    overflow-y: auto;
+    border-radius: 5px;
+}
+
+#divCinemaMovieRevenue {
+    margin: 20px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    box-shadow: 2px 4px 10px black;
+}
+
+#cinemaRevenueWrapper {
+    height: 431px;
+}
+
+#cinemaRevenueContent, #movieRevenueContent {
+    font-size: 18px;
+    color: white;
+}
+
+#revenueOption {
+    height: 515px;
+    color: gray;
+}
+
+#revenueOption .card, #backButton {
+    cursor: pointer;
+    transition: 0.2s;
+    background-color: rgba(0, 0, 0, 0.0);
+    text-align: center;
+}
+
+#revenueOption .card:hover, #backButton:hover {
+    transform: scale(1.05, 1.05);
+}
+
+#historyWrapper .card {
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 0;
+    width: 100%;
+    margin-top: 10px;
+    transition: 0.2s;
+    font-size: 18px;
+    border-radius: 5px;
+    color: silver;
+}
+
+#historyWrapper .card-header {
+    background-color: rgba(125, 125, 125, 0.2);
+}
+
+#historyWrapper .card-body-content {
+    font-size: 18px;
+}
+
+#historyWrapper .card:hover {
+    color: white;
+}
+
+#revenueOption .card {
+    border: 0;
+}
+
+#cinemaListTable, #cinemaRevenueListTable {
+    width: 100%;
+}
+
+#cinemaList {
+    font-size: 18px;
+}
+
+#cinemaList button {
+    width: 100%;
+}
+
+#cinemaList tr:nth-child(odd), #cinemaRevenueList tr:nth-child(odd) {
+    background-color: rgba(125, 125, 125, 0.2);
+}
+
+#cinemaList tr:hover, #cinemaRevenueList tr:hover, #movieRevenueList tr:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+    color: skyblue;
+}
+
+#cinemaList td, #cinemaRevenueList td {
+    padding: 10px;
+}
+
+#cinemaList tr td:nth-child(1) {
+    width: 10%;
+    text-align: center;
+}
+
+#cinemaList tr td:nth-child(2) {
+    width: 30%;
+}
+
+#cinemaList tr td:nth-child(3) {
+    width: 36%;
+}
+
+#cinemaList tr td:nth-child(4) {
+    width: 12%;
+    text-align: center;
+}
+
+#cinemaList tr td:nth-child(5) {
+    width: 12%;
+    text-align: center;
+}
+
+#cinemaRevenueList tr:nth-child(1) {
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 0.7;
+    font-weight: bold;
+}
+
+#cinemaRevenueList tr td:nth-child(3) {
+    text-align: center;
+}
+
+#revenue-content .card {
+    background-color: rgba(0, 0, 0, 0.0);
+    text-align: center;
+}
+
+.select {
+    width: 100%;
+    padding: 5px;
+    background-color: rgba(125, 125, 125, 0.2);
+    color: white;
+    border-radius: 5px;
+    border: 0;
+}
+
+.select option {
+    background-color: black;
+}
+
+.movie .card img {
+    height: 350px;
+}
+
+#movieTab li {
+    background-color: rgba(0, 0, 0, 0.2);
+    margin-right: 2px;
+    margin-top: 2px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+#divBookTicket {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#booking a {
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    border-radius: 0;
+}
+
+#booking .tab-content {
+    background-color: rgba(125, 125, 125, 0.1);
+    color: white;
+    border-radius: 0;
+    margin-left: 5px;
+}
+
+.divBooking {
+    height: 570px;
+    padding-bottom: 20px;
+    overflow: auto;
+    text-align: left;
+}
+
+.tabShowingDate {
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    border: 0;
+    border-bottom: 1px solid gray;
+    font-size: 18px;
+}
+
+.divBooking table {
+    width: 100%;
+}
+
+#bookingCinema tr:nth-child(odd) {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+#bookingCinema tr:hover {
+    color: skyblue;
+}
+
+#bookingCinema .badge {
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+#bookingCinema .badge:hover {
+    transform: scale(1.05, 1.05);
+}
+
+#bookingCinema tr td:nth-child(1) {
+    padding: 5px;
+    font-size: 18px;
+    text-align: left;
+}
+
+#bookingCinema tr td:nth-child(2) {
+    padding: 5px;
+}
+
+#booked-tickets-body{
+    height: 600px;
+    overflow: scroll;
+}
+
+#booked-tickets{
+    background-color: rgba(125, 125, 125, 0.1);
+}
+.ticket-wrapper{
+    background: url("/images/bg12.jpg");
+    background-size: cover;
+    border: 5px solid whitesmoke;
+    margin-bottom: 15px;
+}
+.ticket-barcode{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+.ticket{
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    width: 100%;
+    color: white;
+    font-size: 18px;
+    text-shadow: 1.5px 1.5px black;
+}
+
+.seats {
+    display: table;
+    margin: 0 auto;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.seat-area{
+    background: url("/images/seats.png");
+    background-size: 100% 100%;
+}
+
+.light-button{
+    background-color: rgba(125,125,125,0.4);
+    border: 0;
+    color: white;
+    border-radius: 2px;
+    box-shadow: 2px 4px 5px black;
+    text-shadow: 0.5px 0.5px black;
+}
+
+.success-button{
+    background-color: rgba(92,184,92, 0.8);
+    border: 0;
+    border-radius: 2px;
+    color: white;
+    box-shadow: 2px 4px 5px black;
+    text-shadow: 0.5px 0.5px black;
+}
+
+.danger-button{
+    background-color: rgba(217,83,79, 0.8);
+    border: 0;
+    border-radius: 2px;
+    color: white;
+    box-shadow: 2px 4px 5px black;
+    text-shadow: 0.5px 0.5px black;
+}
+
+#backToBookingDateButton {
+    cursor: pointer;
+}
+
+#footer i:hover {
+    transform: scale(1.5, 1.5);
+}
+
+#footer {
+    background-color: rgba(0, 0, 0, 0.2);
+    height: auto;
+    width: 100%;
+    color: silver;
+    font-size: 18px;
+    padding: 30px;
+}
+
+@media screen and (max-width: 576px) {
+    #divBookTicket {
+        padding: 0;
+        padding-top: 10px;
+    }
+    #bookTicketContent {
+        padding: 5px;
+        padding-top: 20px;
+    }
+    .modal-body {
+        font-size: 16px;
+    }
+    .modal-title {
+        font-size: 20px;
+    }
+    #profile-sidebar {
+        padding: 10px;
+        padding-bottom: 30px;
+    }
+    #change-password-content {
+        width: 100%
+    }
+    #changePasswordButton {
+        width: 100%;
+    }
+    #col-tab-content {
+        padding: 0;
+    }
+    .tabContent {
+        padding: 15px;
+    }
+    #profile-info {
+        padding: 0;
+        padding-top: 10px;
+    }
+}
+
+.map {
+    opacity: 0.7;
+}
